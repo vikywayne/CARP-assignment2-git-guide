@@ -1,0 +1,19 @@
+---
+title: "Example Quarto File"
+author: "Annamalai Vikash Raam Manoj"
+format: html
+---
+
+## Introduction
+
+This document demonstrates a simple Quarto file that can be rendered into HTML.
+
+
+## Example Code
+
+The following code shows a preview of the `mtcars` dataset and calculates the average miles per gallon.
+
+```{r}
+head(mtcars)
+mean(mtcars$mpg)
+```
