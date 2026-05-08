@@ -151,4 +151,11 @@ This generated an HTML file, confirming that the Quarto document renders correct
     `git push origin --delete testbranch`
 
     Removing unused branches helps keep the repository organised.
-    
+
+# Step 9: Viewing the Commit History
+
+* The condensed commit history was displayed using:
+
+    `git log --oneline`
+
+    This command provides a simplified view of the commit history, showing commit hashes and commit messages.
