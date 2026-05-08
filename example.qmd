@@ -6,7 +6,7 @@ format: html
 
 # Introduction
 
-This document demonstrates a simple Quarto file that can be rendered into HTML.
+This document demonstrates the use of Git branches for collaborative version control workflows.
 
 # Step 1: Creating a Quarto Document
 
