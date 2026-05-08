@@ -4,10 +4,14 @@ author: "Annamalai Vikash Raam Manoj"
 format: html
 ---
 
-## Introduction
+# Introduction
 
 This document demonstrates a simple Quarto file that can be rendered into HTML.
 
+# Step 1: Creating a Quarto Document
+
+A new project was created in Positron to organise the workflow. Inside this project, a Quarto document named `example.qmd` was created.
+The file contains a simple R code chunk to demonstrate execution within Quarto.
 
 ## Example Code
 
@@ -17,3 +21,37 @@ The following code shows a preview of the `mtcars` dataset and calculates the av
 head(mtcars)
 mean(mtcars$mpg)
 ```
+
+The document was rendered into HTML using the following command in the terminal:
+
+`quarto render example.qmd --to html`
+
+This generated an HTML file, confirming that the Quarto document renders correctly and executes R code.
+
+# Step 2: Initialising Git and Pushing to GitHub
+
+* The project folder was initialised as a Git repository using the command - `git init`
+
+        This creates a hidden .git directory that allows Git to track changes in the project.
+
+* All files in the project were added to the staging area using:
+
+    `git add .`
+
+    This prepares the files to be committed.
+
+* An initial commit was created using:
+
+    `git commit -m "Initial commit: added example quarto file and rendered HTML output"`
+
+    This saves the current state of the project in the Git history.
+
+* A remote repository was then created on GitHub and linked to the local repository using:
+
+    `git remote add origin <repository-url>`
+    
+    `git branch -M main`
+
+    `git push -u origin main`
+
+    These commands connect the local repository to GitHub and push the committed files to the remote repository, making them available online.

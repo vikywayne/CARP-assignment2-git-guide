@@ -108,10 +108,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <p>This document demonstrates a simple Quarto file that can be rendered into HTML.</p>
 </section>
+<section id="step-1-creating-a-quarto-document" class="level1">
+<h1>Step 1: Creating a Quarto Document</h1>
+<p>A new project was created in Positron to organise the workflow. Inside this project, a Quarto document named <code>example.qmd</code> was created. The file contains a simple R code chunk to demonstrate execution within Quarto.</p>
 <section id="example-code" class="level2">
 <h2 class="anchored" data-anchor-id="example-code">Example Code</h2>
 <p>The following code shows a preview of the <code>mtcars</code> dataset and calculates the average miles per gallon.</p>
@@ -131,6 +134,28 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <pre><code>[1] 20.09062</code></pre>
 </div>
 </div>
+<p>The document was rendered into HTML using the following command in the terminal:</p>
+<p><code>quarto render example.qmd --to html</code></p>
+<p>This generated an HTML file, confirming that the Quarto document renders correctly and executes R code.</p>
+</section>
+</section>
+<section id="step-2-initialising-git-and-pushing-to-github" class="level1">
+<h1>Step 2: Initialising Git and Pushing to GitHub</h1>
+<ul>
+<li><p>The project folder was initialised as a Git repository using the command - <code>git init</code></p>
+<pre><code>  This creates a hidden .git directory that allows Git to track changes in the project.</code></pre></li>
+<li><p>All files in the project were added to the staging area using:</p>
+<p><code>git add .</code></p>
+<p>This prepares the files to be committed.</p></li>
+<li><p>An initial commit was created using:</p>
+<p><code>git commit -m "Initial commit: added example quarto file and rendered HTML output"</code></p>
+<p>This saves the current state of the project in the Git history.</p></li>
+<li><p>A remote repository was then created on GitHub and linked to the local repository using:</p>
+<p><code>git remote add origin &lt;repository-url&gt;</code></p>
+<p><code>git branch -M main</code></p>
+<p><code>git push -u origin main</code></p>
+<p>These commands connect the local repository to GitHub and push the committed files to the remote repository, making them available online.</p></li>
+</ul>
 </section>
 
 </main>
