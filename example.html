@@ -184,6 +184,41 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Force push was required because amending a commit changes the commit history and creates a new commit hash.</p></li>
 </ul>
 </section>
+<section id="step-5-creating-a-merge-conflict-on-main" class="level1">
+<h1>Step 5: Creating a Merge Conflict on Main</h1>
+<ul>
+<li><p>The <code>main</code> branch was checked out again and the introduction section in <code>example.qmd</code> was modified differently from the version in <code>testbranch</code>.</p></li>
+<li><p>The updated file was committed using:</p>
+<p><code>git commit -m "Modified introduction in main branch for merge conflict"</code></p></li>
+<li><p>The changes were then pushed to GitHub.</p>
+<p>Modifying the same section differently in both branches intentionally created a merge conflict scenario.</p></li>
+</ul>
+</section>
+<section id="step-6-merging-and-resolving-a-conflict" class="level1">
+<h1>Step 6: Merging and Resolving a Conflict</h1>
+<ul>
+<li><p>The changes from <code>testbranch</code> were merged into the <code>main</code> branch using:</p>
+<p><code>git merge testbranch</code></p></li>
+<li><p>Git detected a merge conflict because the same line had been modified differently in both branches.</p></li>
+<li><p>The conflict markers were manually removed and the correct final version of the text was retained.</p></li>
+<li><p>After resolving the conflict, the merge was completed using:</p>
+<p><code>git commit -m "Resolved merge conflict between main and testbranch"</code></p></li>
+<li><p>The resolved merge was then pushed to GitHub using:</p>
+<p><code>git push</code></p>
+<p>This updated the remote repository with the merged changes.</p></li>
+</ul>
+</section>
+<section id="step-7-creating-an-annotated-tag" class="level1">
+<h1>Step 7: Creating an Annotated Tag</h1>
+<ul>
+<li><p>An annotated tag named <code>v1.0</code> was created using:</p>
+<p><code>git tag -a v1.0 -m "Version 1.0 after merge conflict resolution"</code></p>
+<p>This tag marks a stable project version after resolving the merge conflict.</p></li>
+<li><p>The tag was pushed to GitHub using:</p>
+<p><code>git push origin v1.0</code></p>
+<p>This made the version tag available in the remote repository.</p></li>
+</ul>
+</section>
 
 </main>
 <!-- /main column -->

@@ -94,3 +94,48 @@ This generated an HTML file, confirming that the Quarto document renders correct
   
   Force push was required because amending a commit changes the commit history and creates a new commit hash.
 
+# Step 5: Creating a Merge Conflict on Main
+
+* The `main` branch was checked out again and the introduction section in `example.qmd` was modified differently from the version in `testbranch`.
+
+* The updated file was committed using:
+
+    `git commit -m "Modified introduction in main branch for merge conflict"`
+
+* The changes were then pushed to GitHub.
+
+    Modifying the same section differently in both branches intentionally created a merge conflict scenario.
+
+# Step 6: Merging and Resolving a Conflict
+
+* The changes from `testbranch` were merged into the `main` branch using:
+
+    `git merge testbranch`
+
+* Git detected a merge conflict because the same line had been modified differently in both branches.
+
+* The conflict markers were manually removed and the correct final version of the text was retained.
+
+* After resolving the conflict, the merge was completed using:
+
+    `git commit -m "Resolved merge conflict between main and testbranch"`
+
+* The resolved merge was then pushed to GitHub using:
+
+    `git push`
+
+    This updated the remote repository with the merged changes.
+
+# Step 7: Creating an Annotated Tag
+
+* An annotated tag named `v1.0` was created using:
+
+    `git tag -a v1.0 -m "Version 1.0 after merge conflict resolution"`
+
+    This tag marks a stable project version after resolving the merge conflict.
+
+* The tag was pushed to GitHub using:
+
+    `git push origin v1.0`
+
+    This made the version tag available in the remote repository.
