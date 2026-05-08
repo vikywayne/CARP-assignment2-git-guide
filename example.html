@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>This document demonstrates a simple Quarto file that can be rendered into HTML.</p>
+<p>This document demonstrates GitHub collaboration and version control using Git branches.</p>
 </section>
 <section id="step-1-creating-a-quarto-document" class="level1">
 <h1>Step 1: Creating a Quarto Document</h1>
@@ -155,6 +155,33 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p><code>git branch -M main</code></p>
 <p><code>git push -u origin main</code></p>
 <p>These commands connect the local repository to GitHub and push the committed files to the remote repository, making them available online.</p></li>
+</ul>
+</section>
+<section id="step-3-creating-and-working-on-a-branch" class="level1">
+<h1>Step 3: Creating and Working on a Branch</h1>
+<ul>
+<li><p>A new branch named <code>testbranch</code> was created and checked out using:</p>
+<p><code>git checkout -b testbranch</code></p>
+<p>This creates a separate branch for development without affecting the <code>main</code> branch.</p></li>
+<li><p>The <code>example.qmd</code> file was modified in the branch and the changes were staged.</p></li>
+<li><p>The changes were committed using:</p>
+<p><code>git commit -m "Updated introduction in testbranch"</code></p>
+<p>This saves the modifications in the branch history.</p></li>
+<li><p>The branch was then pushed to GitHub using:</p>
+<p><code>git push -u origin testbranch</code></p>
+<p>This creates a remote version of the branch and links it to the local branch.</p></li>
+</ul>
+</section>
+<section id="step-4-amending-a-previous-commit" class="level1">
+<h1>Step 4: Amending a Previous Commit</h1>
+<ul>
+<li><p>A <code>data</code> folder was created and the dataset from Assignment 1 was added to it.</p></li>
+<li><p>Instead of creating a new commit, the previous commit was amended using:</p>
+<p><code>git commit --amend -m "Updated introduction and added data folder"</code></p></li>
+<li><p>This modifies the most recent commit by including the new changes.</p>
+<p>The amended commit was pushed to GitHub using:</p>
+<p><code>git push --force</code></p>
+<p>Force push was required because amending a commit changes the commit history and creates a new commit hash.</p></li>
 </ul>
 </section>
 

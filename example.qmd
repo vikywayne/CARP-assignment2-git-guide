@@ -6,7 +6,7 @@ format: html
 
 # Introduction
 
-This document demonstrates a simple Quarto file that can be rendered into HTML.
+This document demonstrates GitHub collaboration and version control using Git branches.
 
 # Step 1: Creating a Quarto Document
 
@@ -55,3 +55,43 @@ This generated an HTML file, confirming that the Quarto document renders correct
     `git push -u origin main`
 
     These commands connect the local repository to GitHub and push the committed files to the remote repository, making them available online.
+
+# Step 3: Creating and Working on a Branch
+
+* A new branch named `testbranch` was created and checked out using:
+    
+    `git checkout -b testbranch`
+
+    This creates a separate branch for development without affecting the `main` branch.
+
+* The `example.qmd` file was modified in the branch and the changes were staged.
+
+* The changes were committed using:
+
+    `git commit -m "Updated introduction in testbranch"`
+
+    This saves the modifications in the branch history.
+
+* The branch was then pushed to GitHub using:
+
+    `git push -u origin testbranch`
+
+    This creates a remote version of the branch and links it to the local branch.
+
+# Step 4: Amending a Previous Commit
+
+* A `data` folder was created and the dataset from Assignment 1 was added to it.
+
+* Instead of creating a new commit, the previous commit was amended using:
+
+    `git commit --amend -m "Updated introduction and added data folder"`
+
+* This modifies the most recent commit by including the new changes.
+  
+  The amended commit was pushed to GitHub using:
+  
+    `git push --force`
+  
+  Force push was required because amending a commit changes the commit history and creates a new commit hash.
+
+
