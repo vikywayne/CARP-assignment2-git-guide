@@ -94,4 +94,3 @@ This generated an HTML file, confirming that the Quarto document renders correct
   
   Force push was required because amending a commit changes the commit history and creates a new commit hash.
 
-
