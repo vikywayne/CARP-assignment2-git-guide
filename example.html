@@ -219,6 +219,16 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>This made the version tag available in the remote repository.</p></li>
 </ul>
 </section>
+<section id="step-8-deleting-the-branch" class="level1">
+<h1>Step 8: Deleting the Branch</h1>
+<ul>
+<li><p>After the merge was completed, the <code>testbranch</code> branch was deleted locally using:</p>
+<p><code>git branch -d testbranch</code></p></li>
+<li><p>The remote version of the branch was deleted from GitHub using:</p>
+<p><code>git push origin --delete testbranch</code></p>
+<p>Removing unused branches helps keep the repository organised.</p></li>
+</ul>
+</section>
 
 </main>
 <!-- /main column -->

@@ -139,3 +139,16 @@ This generated an HTML file, confirming that the Quarto document renders correct
     `git push origin v1.0`
 
     This made the version tag available in the remote repository.
+
+# Step 8: Deleting the Branch
+
+* After the merge was completed, the `testbranch` branch was deleted locally using:
+
+    `git branch -d testbranch`
+
+* The remote version of the branch was deleted from GitHub using:
+
+    `git push origin --delete testbranch`
+
+    Removing unused branches helps keep the repository organised.
+    
