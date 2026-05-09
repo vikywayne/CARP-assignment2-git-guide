@@ -99,6 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-8-deleting-the-branch" id="toc-step-8-deleting-the-branch" class="nav-link" data-scroll-target="#step-8-deleting-the-branch">Step 8: Deleting the Branch</a></li>
   <li><a href="#step-9-viewing-the-commit-history" id="toc-step-9-viewing-the-commit-history" class="nav-link" data-scroll-target="#step-9-viewing-the-commit-history">Step 9: Viewing the Commit History</a></li>
   <li><a href="#step-10-undoing-a-commit-without-losing-changes" id="toc-step-10-undoing-a-commit-without-losing-changes" class="nav-link" data-scroll-target="#step-10-undoing-a-commit-without-losing-changes">Step 10: Undoing a Commit Without Losing Changes</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="example.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
@@ -233,7 +234,23 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>The changes from <code>testbranch</code> were merged into the <code>main</code> branch using:</p>
 <p><code>git merge testbranch</code></p></li>
 <li><p>Git detected a merge conflict because the same line had been modified differently in both branches.</p></li>
-<li><p>The conflict markers were manually removed and the correct final version of the text was retained.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/merge_conflict.png" class="img-fluid figure-img"></p>
+<figcaption>Merge conflict shown while merging testbranch into main</figcaption>
+</figure>
+</div>
+<ul>
+<li>The conflict markers were manually removed and the correct final version of the text was retained.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/conflict_resolved.png" class="img-fluid figure-img"></p>
+<figcaption>Conflict markers removed after resolving the merge conflict</figcaption>
+</figure>
+</div>
+<ul>
 <li><p>After resolving the conflict, the merge was completed using:</p>
 <p><code>git commit -m "Resolved merge conflict between main and testbranch"</code></p></li>
 <li><p>The resolved merge was then pushed to GitHub using:</p>
@@ -321,6 +338,12 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <figcaption>terminal showcasing git soft reset in process</figcaption>
 </figure>
 </div>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>This guide demonstrated the use of Git, GitHub, and command-line workflows within a reproducible Quarto project.<br>
+The workflow included repository initialisation, branching, committing changes, resolving merge conflicts, tagging versions, viewing commit history, and undoing commits while preserving local changes.</p>
+<p>These steps demonstrate how version control tools can support collaborative and reproducible development workflows.</p>
 </section>
 
 </main>

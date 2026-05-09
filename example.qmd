@@ -128,7 +128,11 @@ This generated an HTML file, confirming that the Quarto document renders correct
 
 * Git detected a merge conflict because the same line had been modified differently in both branches.
 
+![Merge conflict shown while merging testbranch into main](images/merge_conflict.png)
+
 * The conflict markers were manually removed and the correct final version of the text was retained.
+
+![Conflict markers removed after resolving the merge conflict](images/conflict_resolved.png)
 
 * After resolving the conflict, the merge was completed using:
 
@@ -204,3 +208,10 @@ plot(mtcars$wt, mtcars$mpg,
     This removed the most recent commit from the Git history while keeping the changes available locally.
 
 ![terminal showcasing git soft reset in process](images/reset_img.png)
+
+# Conclusion
+
+This guide demonstrated the use of Git, GitHub, and command-line workflows within a reproducible Quarto project.  
+The workflow included repository initialisation, branching, committing changes, resolving merge conflicts, tagging versions, viewing commit history, and undoing commits while preserving local changes.
+
+These steps demonstrate how version control tools can support collaborative and reproducible development workflows.
