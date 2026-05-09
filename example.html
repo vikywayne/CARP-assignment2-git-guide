@@ -72,15 +72,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="example_files/libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="example_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="example_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="example_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="example_files/libs/bootstrap/bootstrap-67270d1595a62d14f123c043d4fb2f18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#step-1-creating-a-quarto-document" id="toc-step-1-creating-a-quarto-document" class="nav-link" data-scroll-target="#step-1-creating-a-quarto-document">Step 1: Creating a Quarto Document</a>
+  <ul class="collapse">
+  <li><a href="#example-code" id="toc-example-code" class="nav-link" data-scroll-target="#example-code">Example Code</a></li>
+  </ul></li>
+  <li><a href="#step-2-initialising-git-and-pushing-to-github" id="toc-step-2-initialising-git-and-pushing-to-github" class="nav-link" data-scroll-target="#step-2-initialising-git-and-pushing-to-github">Step 2: Initialising Git and Pushing to GitHub</a></li>
+  <li><a href="#step-3-creating-and-working-on-a-branch" id="toc-step-3-creating-and-working-on-a-branch" class="nav-link" data-scroll-target="#step-3-creating-and-working-on-a-branch">Step 3: Creating and Working on a Branch</a></li>
+  <li><a href="#step-4-amending-a-previous-commit" id="toc-step-4-amending-a-previous-commit" class="nav-link" data-scroll-target="#step-4-amending-a-previous-commit">Step 4: Amending a Previous Commit</a></li>
+  <li><a href="#step-5-creating-a-merge-conflict-on-main" id="toc-step-5-creating-a-merge-conflict-on-main" class="nav-link" data-scroll-target="#step-5-creating-a-merge-conflict-on-main">Step 5: Creating a Merge Conflict on Main</a></li>
+  <li><a href="#step-6-merging-and-resolving-a-conflict" id="toc-step-6-merging-and-resolving-a-conflict" class="nav-link" data-scroll-target="#step-6-merging-and-resolving-a-conflict">Step 6: Merging and Resolving a Conflict</a></li>
+  <li><a href="#step-7-creating-an-annotated-tag" id="toc-step-7-creating-an-annotated-tag" class="nav-link" data-scroll-target="#step-7-creating-an-annotated-tag">Step 7: Creating an Annotated Tag</a></li>
+  <li><a href="#step-8-deleting-the-branch" id="toc-step-8-deleting-the-branch" class="nav-link" data-scroll-target="#step-8-deleting-the-branch">Step 8: Deleting the Branch</a></li>
+  <li><a href="#step-9-viewing-the-commit-history" id="toc-step-9-viewing-the-commit-history" class="nav-link" data-scroll-target="#step-9-viewing-the-commit-history">Step 9: Viewing the Commit History</a></li>
+  <li><a href="#step-10-undoing-a-commit-without-losing-changes" id="toc-step-10-undoing-a-commit-without-losing-changes" class="nav-link" data-scroll-target="#step-10-undoing-a-commit-without-losing-changes">Step 10: Undoing a Commit Without Losing Changes</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="example.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -137,13 +158,19 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>The document was rendered into HTML using the following command in the terminal:</p>
 <p><code>quarto render example.qmd --to html</code></p>
 <p>This generated an HTML file, confirming that the Quarto document renders correctly and executes R code.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/exmp_out.png" class="img-fluid figure-img"></p>
+<figcaption>Output of sample code in the example html file</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="step-2-initialising-git-and-pushing-to-github" class="level1">
 <h1>Step 2: Initialising Git and Pushing to GitHub</h1>
 <ul>
-<li><p>The project folder was initialised as a Git repository using the command - <code>git init</code></p>
-<pre><code>  This creates a hidden .git directory that allows Git to track changes in the project.</code></pre></li>
+<li><p>The project folder was initialised as a Git repository using the command: <code>git init</code></p>
+<p>This creates a hidden .git directory that allows Git to track changes in the project.</p></li>
 <li><p>All files in the project were added to the staging area using:</p>
 <p><code>git add .</code></p>
 <p>This prepares the files to be committed.</p></li>
@@ -156,6 +183,12 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p><code>git push -u origin main</code></p>
 <p>These commands connect the local repository to GitHub and push the committed files to the remote repository, making them available online.</p></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/repo_page2.png" class="img-fluid figure-img"></p>
+<figcaption>snapshot of Github repository with all the files from local repository</figcaption>
+</figure>
+</div>
 </section>
 <section id="step-3-creating-and-working-on-a-branch" class="level1">
 <h1>Step 3: Creating and Working on a Branch</h1>
@@ -178,7 +211,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>A <code>data</code> folder was created and the dataset from Assignment 1 was added to it.</p></li>
 <li><p>Instead of creating a new commit, the previous commit was amended using:</p>
 <p><code>git commit --amend -m "Updated introduction and added data folder"</code></p></li>
-<li><p>This modifies the most recent commit by including the new changes.</p>
+<li><p>This updates the most recent commit by including the newly added files.</p>
 <p>The amended commit was pushed to GitHub using:</p>
 <p><code>git push --force</code></p>
 <p>Force push was required because amending a commit changes the commit history and creates a new commit hash.</p></li>
@@ -218,6 +251,12 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p><code>git push origin v1.0</code></p>
 <p>This made the version tag available in the remote repository.</p></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tag.png" class="img-fluid figure-img"></p>
+<figcaption>tag shown in Github repository</figcaption>
+</figure>
+</div>
 </section>
 <section id="step-8-deleting-the-branch" class="level1">
 <h1>Step 8: Deleting the Branch</h1>
@@ -228,6 +267,18 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p><code>git push origin --delete testbranch</code></p>
 <p>Removing unused branches helps keep the repository organised.</p></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/del_bf.png" class="img-fluid figure-img"></p>
+<figcaption>github repo page before deleting the branch in remote</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/del_aft.png" class="img-fluid figure-img"></p>
+<figcaption>github repo page after deleting the branch in remote</figcaption>
+</figure>
+</div>
 </section>
 <section id="step-9-viewing-the-commit-history" class="level1">
 <h1>Step 9: Viewing the Commit History</h1>
@@ -236,6 +287,40 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p><code>git log --oneline</code></p>
 <p>This command provides a simplified view of the commit history, showing commit hashes and commit messages.</p></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/commit_log.png" class="img-fluid figure-img"></p>
+<figcaption>Condensed git commit history</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-10-undoing-a-commit-without-losing-changes" class="level1">
+<h1>Step 10: Undoing a Commit Without Losing Changes</h1>
+<ul>
+<li>A new section containing a simple plot was added to the Quarto document.</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="example_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>The changes were committed using:</p>
+<p><code>git commit -m "Added plot section for reset demonstration"</code></p></li>
+<li><p>The commit was then undone without removing the local file changes using:</p>
+<p><code>git reset --soft HEAD~1</code></p>
+<p>This removed the most recent commit from the Git history while keeping the changes available locally.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/reset_img.png" class="img-fluid figure-img"></p>
+<figcaption>terminal showcasing git soft reset in process</figcaption>
+</figure>
+</div>
 </section>
 
 </main>
