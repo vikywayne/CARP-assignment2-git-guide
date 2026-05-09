@@ -215,3 +215,22 @@ This guide demonstrated the use of Git, GitHub, and command-line workflows withi
 The workflow included repository initialisation, branching, committing changes, resolving merge conflicts, tagging versions, viewing commit history, and undoing commits while preserving local changes.
 
 These steps demonstrate how version control tools can support collaborative and reproducible development workflows.
+
+
+# AI Acknowledgement
+
+AI assistance was used in a limited manner during the development of this assessment, primarily for clarifying Git workflow behaviour, troubleshooting command-line issues, and improving the structure and readability of the written guide. The main tool used was ChatGPT.
+
+The assignment workflow, Git operations, repository management, merge conflict handling, screenshots, Quarto document preparation, and final report construction were completed independently. AI-generated responses were not copied directly into the assessment without modification and were instead used to clarify concepts, troubleshoot errors, and improve documentation flow.
+
+Screenshots of queries asked include:
+
+![](images/s1.png)
+![](images/s2.png)
+![](images/s3.png)
+![](images/s4.png)
+![](images/s5.png)
+![](images/s6.png)
+![](images/s7.png)
+![](images/s8.png)
+![](images/s9.png)
